@@ -3,6 +3,6 @@ RUN mkdir /app
 WORKDIR /app
 MAINTAINER Phea Soy
 VOLUME [ "/tmp" ]
-COPY  ..
+ADD . /app
 EXPOSE 9977
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
